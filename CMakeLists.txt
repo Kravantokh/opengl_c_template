@@ -45,14 +45,14 @@ endif()
 if (WIN32)
 	#Apparently on windows despite having python3 installed it would not recognize python3 as a command, so only python should be run.
 	message("Successfully found Python. Running download script for gl3w.")
-	execute_process(COMMAND python gl3w_gen.py --root ${GL3W_GENERATE_DIR} WORKING_DIRECTORY ${GL3W_GENERATE_DIR})
+	execute_process(COMMAND python gl3w_gen.py --root ${GL3W_GENERATE_DIR} WORKING_DIRECTORY ${GL3W_DIR})
 #On linux the command does matter, thus it is tested which version to use.
 elseif(${Python_VERSION} GREATER_EQUAL 3.0)
 	message("Successfully found Python3. Running download script for gl3w.")
-	execute_process(COMMAND python3 gl3w_gen.py --root ${GL3W_GENERATE_DIR} WORKING_DIRECTORY ${GL3W_GENERATE_DIR})
+	execute_process(COMMAND python3 gl3w_gen.py --root ${GL3W_GENERATE_DIR} WORKING_DIRECTORY ${GL3W_DIR})
 elseif(${Python_VERSION} LESS 3.0)
 	message("Successfully found Python2. Running download script for gl3w.")
-	execute_process(COMMAND python gl3w_gen.py --root ${GL3W_GENERATE_DIR} WORKING_DIRECTORY ${GL3W_GENERATE_DIR})
+	execute_process(COMMAND python gl3w_gen.py --root ${GL3W_GENERATE_DIR} WORKING_DIRECTORY ${GL3W_DIR})
 endif()
 
 
