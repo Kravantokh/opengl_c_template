@@ -1,0 +1,6 @@
+[submodule "lib/gl3w"]
+	path = lib/gl3w
+	url = https://github.com/skaslev/gl3w.git
+[submodule "lib/glfw"]
+	path = lib/glfw
+	url = https://github.com/glfw/glfw
